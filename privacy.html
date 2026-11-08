@@ -1,19 +1,40 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy</title></head>
-<body style="font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.6">
-<h1>Privacy Policy</h1>
-<p>Last updated: 2026-11-07</p>
-<p>munntao-youtube is a private tool used only by its operator to manage the operator's own YouTube channels.</p>
-<h2>What it accesses</h2>
-<p>With the operator's permission, it uses the YouTube Data API to upload videos to the operator's own channels and to set their titles, descriptions, tags, thumbnails, captions and privacy settings. It reads channel information only to confirm it is working on the right channel.</p>
-<h2>What it stores</h2>
-<p>Access tokens are stored only on the operator's own computer. Nothing is stored on any server run by this tool.</p>
-<h2>Sharing</h2>
-<p>It does not collect data about other people, and it does not sell, share or transfer any data to third parties.</p>
-<h2>Revoking access</h2>
-<p>Access can be removed at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
-<h2>Contact</h2>
-<p>Open an issue at <a href="https://github.com/munn/munntao-youtube/issues">github.com/munn/munntao-youtube</a>.</p>
-<p><a href="./">Home</a></p>
+<title>Privacy Policy</title><style>body{font-family:system-ui,-apple-system,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1d1c1a;background:#fff}h2{margin-top:28px;font-size:1.15em}code{background:#f2f2f2;padding:1px 4px;border-radius:3px}</style></head>
+<body>
+<h1>Privacy Policy — Munntao Video Publisher</h1>
+<p>Last updated: 2026-11-08</p>
+<p>Munntao Video Publisher ("the tool") is an internal command-line tool. Its only user is its operator, who uses it to publish videos to the operator's own YouTube channels.</p>
+
+<h2>YouTube API Services</h2>
+<p>The tool uses the YouTube API Services. By using the tool you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of your data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> (<a href="http://www.google.com/policies/privacy">www.google.com/policies/privacy</a>).</p>
+
+<h2>What information the tool accesses</h2>
+<p>With the permission the user grants through Google OAuth (scope <code>https://www.googleapis.com/auth/youtube.force-ssl</code>), the tool:</p>
+<ul>
+<li>reads the signed-in channel's ID and handle, only to confirm it is working on the intended channel;</li>
+<li>uploads videos and writes their title, description, tags, category, language, privacy status, scheduled publish time, synthetic-content disclosure, thumbnail and English captions;</li>
+<li>reads the list of caption tracks on a video it is updating, only to avoid adding a duplicate English track;</li>
+<li>reads a video's current status when updating it, only to keep its current privacy setting.</li>
+</ul>
+<p>It does not access viewer data, comments, subscribers, analytics, or any other channel's data.</p>
+
+<h2>How the information is used, stored and shared</h2>
+<ul>
+<li>Channel ID and handle are used only during a run and are not saved.</li>
+<li>The OAuth access and refresh tokens are stored only on the user's own computer, in a folder readable only by that user. The tool has no server and sends no data anywhere except to Google's YouTube API.</li>
+<li>No information is shared with, sold to, or transferred to any third party, inside or outside the operator's organization.</li>
+<li>The tool does not use cookies and does not place or read any information on users' devices or browsers, other than the token file described above.</li>
+</ul>
+
+<h2>How to revoke access and delete data</h2>
+<ul>
+<li>You can revoke the tool's access at any time from the Google security settings page: <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>.</li>
+<li>Deleting the token file on your computer removes all data the tool keeps. If you revoke access, the stored token stops working and is deleted from the computer within 7 days.</li>
+<li>To request deletion or ask a question, open an issue at <a href="https://github.com/munn/munntao-youtube/issues">github.com/munn/munntao-youtube/issues</a>.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>Changes to this policy are posted on this page with a new "Last updated" date.</p>
+<p><a href="./">Home</a> · <a href="terms.html">Terms of Use</a></p>
 </body></html>

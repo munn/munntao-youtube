@@ -1,9 +1,30 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>munntao-youtube</title></head>
-<body style="font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;line-height:1.6">
-<h1>munntao-youtube</h1>
-<p>munntao-youtube is a private, internal tool. It uploads videos and sets video details (title, description, thumbnail, captions) on YouTube channels owned by its operator, using the YouTube Data API.</p>
-<p>It is not offered to the public, and no one else can sign up or use it.</p>
-<p><a href="privacy.html">Privacy Policy</a></p>
+<title>Munntao Video Publisher</title><style>body{font-family:system-ui,-apple-system,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1d1c1a;background:#fff}h2{margin-top:28px;font-size:1.15em}code{background:#f2f2f2;padding:1px 4px;border-radius:3px}</style></head>
+<body>
+<h1>Munntao Video Publisher</h1>
+<p>Munntao Video Publisher is an internal command-line tool. Its operator uses it to publish videos to the operator's own YouTube channels. It uses the YouTube API Services (YouTube Data API v3).</p>
+<p>It is not offered to the public. No one else can sign up, sign in or use it, and it has no web interface.</p>
+
+<h2>What it does</h2>
+<ul>
+<li>Uploads a finished video file to one of the operator's own channels (<code>videos.insert</code>).</li>
+<li>Sets the video's title, description, tags, category, language, privacy status or scheduled publish time, and the altered-or-synthetic-content disclosure (<code>videos.insert</code>, <code>videos.update</code>).</li>
+<li>Sets a custom thumbnail that the operator approved beforehand (<code>thumbnails.set</code>).</li>
+<li>Adds an English caption track (<code>captions.list</code>, <code>captions.insert</code>).</li>
+<li>Before every run, reads the signed-in channel's ID and handle (<code>channels.list</code>) and stops if it is not the channel the operator chose.</li>
+</ul>
+<p>It does not read, analyze or store data about other channels, viewers, comments or analytics, and it does not show YouTube data to anyone.</p>
+
+<h2>How sign-in works</h2>
+<p>The operator signs in once per channel with Google OAuth and picks that channel. The access token is stored only on the operator's own computer. Access can be removed at any time from the Google security settings page: <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>.</p>
+
+<h2>Policies</h2>
+<p>By using Munntao Video Publisher you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+<ul>
+<li><a href="terms.html">Terms of Use</a></li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+</ul>
+<p>Contact: open an issue at <a href="https://github.com/munn/munntao-youtube/issues">github.com/munn/munntao-youtube/issues</a>.</p>
 </body></html>
